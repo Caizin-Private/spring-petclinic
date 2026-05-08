@@ -32,6 +32,7 @@ metadata:
   labels:
     app: demo-db
 spec:
+  replicas: 0
   selector:
     matchLabels:
       app: demo-db
