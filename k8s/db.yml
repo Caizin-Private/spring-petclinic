@@ -96,16 +96,3 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: demo-db
-
----
-apiVersion: policy/v1
-kind: PodDisruptionBudget
-metadata:
-  name: demo-db
-  labels:
-    app: demo-db
-spec:
-  minAvailable: 1
-  selector:
-    matchLabels:
-      app: demo-db
